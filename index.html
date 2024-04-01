@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+
+            background-image: url('https://i.pinimg.com/originals/e7/2c/d1/e72cd1b3049474f7a2f496505a6773d2.gif');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 15px 40px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            background: url('https://raw.githubusercontent.com/Randyh-25/UntukPacar/main/Gambar/R.png') no-repeat center center;
+            background-size: cover;
+            color: #ffffff;
+            border: none;
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+        }
+
+        #yesButton {
+            margin-right: 20px;
+        }
+
+        #noButton {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Jawab dulu pertanyaan ini sebelum lanjut</h1>
+    <h1>Randy cocok ga sih sama kamu?</h1>
+    <h1>(gunakan gambar dibawah sebagai referensi)</h1>
+
+    <form action="#" method="post" id="answerForm">
+        <button type="button" id="yesButton" onclick="redirectToNewPage()">IYAA</button>
+        <button type="button" id="noButton" onmouseover="moveNoButton()">GA!!</button>
+    </form>
+
+    <h1>Gaboleh klik tombol "GA" hehe</h1>
+    <img src="https://raw.githubusercontent.com/Randyh-25/UntukPacar/main/Gambar/pacar.jpg" alt="Ayang">
+    <audio controls autoplay loop>
+    <source src="https://raw.githubusercontent.com/Randyh-25/UntukPacar/main/Backsound/Nanti%20Kita%20Seperti%20Ini.mp3" type="audio/mp3">
+  </audio>
+    
+
+    <script>
+        function moveNoButton() {
+            var noButton = document.getElementById('noButton');
+            var maxX = window.innerWidth - noButton.clientWidth;
+            var maxY = window.innerHeight - noButton.clientHeight;
+
+            var newX = Math.floor(Math.random() * maxX);
+            var newY = Math.floor(Math.random() * maxY);
+
+            noButton.style.position = 'absolute';
+            noButton.style.left = newX + 'px';
+            noButton.style.top = newY + 'px';
+        }
+
+        function redirectToNewPage() {
+            // Change this URL to the desired destination
+            window.location.href = 'https://randyh-25.github.io/UntukPacar/Page/Page2.html';
+        }
+    </script>
+</body>
+</html>
